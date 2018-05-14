@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD html 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Week 10 class plan</title>
+    <link rel="stylesheet" title="plain" type="text/css" href="plain.css" />
+    <link rel="alternate stylesheet" title="colour" type="text/css" href="colour.css"/>
+  </head>
+  <body>
+    <h1>Building on a framework</h1>
+    <p>My plan for this class:<ol>
+      <li>adjustments to our schedule due to strike<ul>
+        <li>moving modes and screens to week 11</li>
+        <li>tutorial: creating an SDL project</li>
+        <li>lecture: construction topics</li>
+	<li>example: mixing text and graphics</li>
+	<li>tutorial: building on a framework</li></ul></li>
+      <li>tutorial: creating an SDL project<ul>
+        <li>file new project<ul>
+          <li>Win32 console application</li>
+          <li>do not tick the create solution directory box</li>
+          <li>the path should be the path to your personal folder</li>
+          <li>tip: choose a name without spaces (use underscore to break words)</li>
+          <li>select empty project</li></ul></li>
+        <li>choose properties on project<ul>
+          <li>choose configuration: all configurations</li>
+          <li>choose VC++ directories</li>
+          <li>choose include directories</li>
+          <li>choose edit and add:<ul>
+            <li>$(USERPROFILE)\Documents\programming\libraries\include</li></ul></li>
+          <li>choose library directories</li>
+          <li>choose edit and add:<ul>
+            <li>$(USERPROFILE)\Documents\programming\libraries\lib</li></ul></li>
+          <li>open the Linker options</li>
+          <li>choose input</li>
+          <li>choose additional dependencies</li>
+          <li>choose edit and add:<ul>
+            <li>SDL.lib</li>
+            <li>SDLmain.lib</li>
+            <li>SDL_mixer.lib</li>
+            <li>SDL_ttf.lib</li>
+            <li>opengl32.lib</li></ul></li>
+          <li>tip: to prevent a linker warning in the debug build:<ul>
+            <li>choose configuration: debug</li>
+            <li>choose ignore specific default libraries</li>
+            <li>choose edit and add: msvcrt.lib</li></ul></li></ul></li>
+        <li>you can now add files to your project</li>
+        <li>to test this:<ul>
+          <li>take any existing project</li>
+          <li>copy in all cpp source and header files</li>
+          <li>choose add existing item</li>
+          <li>copy in any required data files (bitmaps, audio, etc.)</li>
+          <li>now build and run</li>
+          <li>if it works you can now build your new project</li></ul></li></ul></li>
+      <li>break</li>
+      <li>lecture: construction topics<ul>
+        <li>programming by intention<ul>
+          <li>wishful thinking</li>
+          <li>divide and conquer</li>
+          <li>what if somebody had already written the code I want?</li></ul></li>
+        <li>assertions<ul>
+          <li>used to catch programming mistakes</li>
+          <li>don't use for error handling</li></ul></li>
+        <li>pair programming<ul>
+          <li>two programmers working together at one machine</li>
+          <li>good for team working - spreading knowledge</li>
+          <li>raises the "truck number" of a team</li>
+          <li>improves code quality</li>
+          <li>lowers development time</li></ul></li>
+        <li>unit testing<ul>
+          <li>writing another program to test the parts of a program</li>
+          <li>helps to keep the code modular</li>
+          <li>good for developing engines and modules</li>
+          <li>makes refactoring safer</li>
+          <li>some external tool support</li></ul></li>
+        <li>refactoring<ul>
+          <li>already seen this in previous examples</li>
+          <li>change the expression without changing the behaviour</li>
+          <li>reduce duplication</li>
+          <li>improve modularity</li>
+          <li>make changes easier</li>
+          <li>improve readability</li></ul></li>
+        <li>debug build<ul>
+          <li>runs slower but checks for more errors</li>
+          <li>easier to debug</li>
+          <li>conditional compilation</li></ul></li>
+        <li>DRY: don't repeat yourself<ul>
+          <li>keep an eye on areas that you are frequently repeating</li>
+          <li>are you doing a lot of cut and paste programming?</li>
+          <li>refactor to remove duplication</li></ul></li>
+        <li>YAGNI: you aren't gonna need it<ul>
+          <li>write your program under this assumption</li>
+          <li>don't add functionality for things you don't need yet!</li></ul></li>
+        <li>KISS: keep it simple, stupid!<ul>
+          <li>simple programs are <i>much</i> easier to write</li>
+          <li>refactor to remove unnecessary functions, parameters, or variables</li></ul></li></ul></li>
+      <li>break</li>
+      <li>example: mixing text and graphics<ul>
+        <li>update examples folder</li>
+        <li>open text_object project</li>
+        <li>same procedure as earlier projects</li>
+        <li>uses new TTF (True Type Font) library<ul>
+          <li><a href="http://www.libsdl.org/projects/SDL_ttf/docs/SDL_ttf_frame.html">http://www.libsdl.org/projects/SDL_ttf/docs/SDL_ttf_frame.html</a></li></ul></li>
+        <li>requires a TTF font<ul>
+          <li>copyright issues</li>
+          <li>liberation font</li>
+          <li>include any required licenses in the distribution</li>
+          <li>load the file from the game like other resources</li></ul></li>
+        <li>displaying text: two stage process<ul>
+          <li>create an object to represent the text</li>
+          <li>render the image as any other object</li></ul></li></ul></li>
+      <li>break</li>
+      <li>tutorial: building on a framework<ul>
+        <li>start with a new SDL project as previous tutorial</li>
+        <li>remove game specific parts to leave just the framework</li>
+        <li>identify the player object in your own game<ul>
+          <li>this is the thing that will respond to your input</li>
+          <li>it might be: a spaceship; a man; or, something more abstract</li>
+        <li>programming by intention: assume you already had this object</li>
+        <li>create a player source file and header file</li>
+        <li>draw your player object</li>
+        <li>make it update and respond to your input</li>
+        <li>identify other objects in your game and repeat this process</li></ul></li></ol></p>
+  </body>
+</html>

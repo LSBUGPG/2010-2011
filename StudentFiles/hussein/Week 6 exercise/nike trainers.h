@@ -1,0 +1,1 @@
+class object * load_nike_trainers_objects(const char * image, float radius);

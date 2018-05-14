@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD html 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Week 11 class plan</title>
+    <link rel="stylesheet" title="plain" type="text/css" href="plain.css" />
+    <link rel="alternate stylesheet" title="colour" type="text/css" href="colour.css"/>
+  </head>
+  <body>
+    <h1>Building a game shell</h1>
+    <p>My plan for this class:<ol>
+      <li>adjustments to our schedule due to strike<ul>
+	<li>example: creating a game shell moved from week 9</li>
+	<li>lecture: technical checks</li>
+	<li>tutorial: project work</li></ul></li>
+      <li>example: creating a game shell<ul>
+        <li>started with a new SDL project as previously described</li>
+        <li>new class to represent a state</li>
+        <li>create a new class to manage states: state_machine</li>
+        <li>each state has an enter and leave function</li>
+        <li>the state_machine:<ul>
+          <li>manages the switching of states</li>
+          <li>forwards reset, update, and draw calls to the current state</li>
+          <li>states can trigger switches to into other states</li>
+          <li>note the similarity to the first adventure example (goto)</li></ul></li>
+        <li>states use the singleton "pattern" to:<ul>
+          <li>provide global access</li>
+          <li>enforce exactly one instance</li>
+          <li>control the point of initialisation</li></ul></li></ul></li>
+      <li>break</li>
+      <li>lecture: technical checks<ul>
+        <li>soak testing<ul>
+          <li>expose fragmentation problems</li>
+          <li>help to find rare bugs</li>
+          <li>allow a game to run in attract mode unattended</li></ul></li>
+        <li>blank or static screens<ul>
+          <li>easily done while loading</li>
+          <li>difficult for the user to tell if the game has crashed</li>
+          <li>usually fixed with a spinner of some kind</li></ul></li>
+        <li>flashing images<ul>
+          <li>sudden or high frequency flashing images can cause epilepsy</li>
+          <li>console manufacturers have strict requirements on this</li></ul></li>
+        <li>content ratings<ul>
+          <li>sex, violence, and bad language</li>
+          <li>iconic imagery (Nazi iconography in Germany)</li>
+          <li>other cultural or religious conventions</li></ul></li>
+        <li>shut down time limits<ul>
+          <li>some systems require clean-up within a time limit</li>
+          <li>shut down can be triggered at any time</li>
+          <li>needs to be quick and any process must be interruptible</li></ul></li>
+        <li>pause and continue<ul>
+          <li>any process must be interruptible and resume-able</li>
+          <li>hardware limitations can make this tricky</li>
+          <li>keeping video and audio in sync</li></ul></li>
+        <li>save file recovery<ul>
+          <li>save to temporary first</li>
+          <li>auto recover if power is switched off during save</li></ul></li>
+        <li>boot messages<ul>
+          <li>sometimes you need to display messages before loading a font!</li>
+          <li>console manufacturers ought to handle this kind of thing</li>
+          <li>system fonts or embedded data fonts</li></ul></li></ul></li>
+      <li>break</li>
+      <li>tutorial: project work</li></ol></p>
+  </body>
+</html>

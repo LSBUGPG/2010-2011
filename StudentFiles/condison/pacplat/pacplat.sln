@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pacplat", "pacplat.vcxproj", "{7EB7C90F-C74E-43DE-ACFC-AD0949A77D3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EB7C90F-C74E-43DE-ACFC-AD0949A77D3C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7EB7C90F-C74E-43DE-ACFC-AD0949A77D3C}.Debug|Win32.Build.0 = Debug|Win32
+		{7EB7C90F-C74E-43DE-ACFC-AD0949A77D3C}.Release|Win32.ActiveCfg = Release|Win32
+		{7EB7C90F-C74E-43DE-ACFC-AD0949A77D3C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

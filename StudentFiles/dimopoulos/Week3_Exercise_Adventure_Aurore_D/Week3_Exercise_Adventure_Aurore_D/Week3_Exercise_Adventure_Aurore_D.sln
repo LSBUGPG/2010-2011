@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Week3_Exercise_Adventure_Aurore_D", "Week3_Exercise_Adventure_Aurore_D.vcxproj", "{FAB262A1-A472-4E8D-846B-6FC88AD62DCA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAB262A1-A472-4E8D-846B-6FC88AD62DCA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FAB262A1-A472-4E8D-846B-6FC88AD62DCA}.Debug|Win32.Build.0 = Debug|Win32
+		{FAB262A1-A472-4E8D-846B-6FC88AD62DCA}.Release|Win32.ActiveCfg = Release|Win32
+		{FAB262A1-A472-4E8D-846B-6FC88AD62DCA}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

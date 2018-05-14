@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD html 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Week 4 class plan</title>
+	<link rel="stylesheet" title="plain" type="text/css" href="plain.css" />
+	<link rel="alternate stylesheet" title="colour" type="text/css" href="colour.css"/>
+</head>
+<body>
+	<h1>SDL graphics and sound</h1>
+	<p>My plan for this class:<ol>
+		<li>recap<ul>
+			<li>Visual Studio C++ Express install issues?</li>
+			<li><a href="subversion_troubleshooting.html">Tortoise SVN on Windows 7 errors</a></li>
+			<li><a href="linking_tortoise_folders.html">standard folder structure</a></li></ul></li>
+		<li>break</li>
+		<li>another look at the RPG battle<ul>
+			<li>open the rpg example program</li>
+			<li>revision 1<ul>
+				<li>copy existing battle code to new project</li>
+				<li>note how the battle code is tied in to the flow</li></ul></li>
+			<li>revision 2<ul>
+				<li>pull out the battle loop and pass variables</li>
+				<li>note the number of variables</li>
+				<li>note the duplication of variable names</li></ul></li>
+			<li>revision 3<ul>
+				<li>introduce the struct keyword</li>
+				<li>refactor variables into structs</li>
+				<li>it is now easier to add new battle loops</li>
+				<li>note the code is beginning to look like an RPG engine</li></ul></li>
+			<li>revision 4<ul>
+				<li>create a new source file for engine code</li>
+				<li>create a new header file to connect together</li>
+				<li>as projects grow they split into smaller component projects</li>
+				<li>the components are programming libraries</li></ul></li></ul></li>
+		<li>break</li>
+		<li>sound board program<ul>
+			<li>open the board example program</li>
+			<li>note this program uses the SDL library:<ul>
+				<li>http://libsdl.org</li></ul></li>
+			<li>check for build problems</li>
+			<li>note directories settings to find library</li>
+			<li>note library names in linker settings</li>
+			<li>to run you'll need to copy SDL.dll and SDL_mixer.dll into your program's Debug folder</li>
+			<li>note to redistribute a program like this, you'll need to include:<ul>
+				<li>your program</li>
+				<li>any data files</li>
+				<li>any DLL files</li>
+				<li>any licenses</li>	</ul></li></ul></li>
+		<li>exercise<ul>
+			<li>customise your own sound board</li>
+			<li>change the pictures and sounds</li>
+			<li>change the number of entries if you like</li>
+			<li>copy the existing project by copying the following files:<ul>
+				<li>board.sln</li>
+				<li>board.vcxproj</li>
+				<li>board.vcxproj.filters</li>
+				<li>board.cpp</li></ul></li>
+			<li>when you submit, remember to include your data files</li></ul></li>
+
+</ol></p>
+
+</body>
+</html>

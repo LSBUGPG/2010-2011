@@ -1,0 +1,91 @@
+#include "state.h"
+#include "measurements.h"
+
+#include "object.h"
+#include "engine.h"
+#include "controls.h"
+
+struct line {
+     int image;
+     float size[2];
+     float position[2];
+};
+
+class credits : public state {
+     line credit_line[2];
+     int number_of_lines;
+     float timer;
+public:
+     credits() {
+          TTF_Font* font = load_font("LiberationMono-Bold.ttf", 20);
+          if (font) {
+               int colour[] = { 255, 255, 255 };
+               credit_line[0].image = load_text_line(font, "CREDITS", credit_line[0].size, colour);
+               release_font(font);
+          }
+          font = load_font("LiberationMono-Regular.ttf", 20);
+          if (font) {
+               int colour[] = { 255, 255, 255 };
+               credit_line[1].image = load_text_line(font, "music from:http://www.flashkit.com/loops/Ambient/Soundscapes/One_Last-Sir_Shir-10333/index.php", credit_line[1].size,colour);
+               release_font(font);
+          }
+          number_of_lines = sizeof(credit_line) / sizeof(credit_line[0]);
+     }
+
+     void enter() {
+          reset();
+     }
+
+     void reset() {
+          timer = 20.0f;
+          skip = false;
+
+          float vertical = -half_height;
+          const float line_height = 32.0f;
+
+          for (int line_number = 0; line_number < number_of_lines; line_number++) {
+               credit_line[line_number].position[0] = 0.0f;
+               credit_line[line_number].position[1] = vertical;
+               vertical -= line_height;
+          }
+     }
+
+     void update(float time) {
+          if (skip) {
+               timer = 0.0f;
+          }
+          if (timer > time) {
+               timer -= time;
+          } else {
+               change_state(title_state());
+          }
+
+          const float credits_speed = 16; // pixels per second
+
+          for (int line_number = 0; line_number < number_of_lines; line_number++) {
+               credit_line[line_number].position[1] += time* credits_speed;
+          }
+     }
+
+     void draw() {
+          for (int line_number = 0; line_number < number_of_lines; line_number++) {
+               draw_bitmap(
+                    credit_line[line_number].image,
+                    credit_line[line_number].position,
+                    credit_line[line_number].size);
+          }
+     }
+
+     void leave() {
+     }
+};
+
+state* credits_state()
+{
+     static state* singleton = 0;
+     if (!singleton) {
+          static credits instance;
+          singleton = &instance;
+     }
+     return singleton;
+}

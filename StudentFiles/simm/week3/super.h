@@ -1,0 +1,1 @@
+class object * load_super_objects(const char * image, const char * audio, float radius);

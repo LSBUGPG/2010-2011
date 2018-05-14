@@ -1,0 +1,1 @@
+class object * load_cat_objects(const char * image, float radius);

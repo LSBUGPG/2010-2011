@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD html 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Week 6 class plan</title>
+	<link rel="stylesheet" title="plain" type="text/css" href="plain.css" />
+	<link rel="alternate stylesheet" title="colour" type="text/css" href="colour.css"/>
+</head>
+<body>
+	<h1>Objects</h1>
+	<p>My plan for this class:<ol>
+		<li>recap</li>
+		<li>adding more instances:<ul>
+			<li>objects version 1<ul>
+				<li>a copy of the bounce program</li></ul></li>
+			<li>objects version 2<ul>
+				<li>multiple instances updated in a loop</li>
+				<li>render with alpha blending because instances overlap</li>
+				<li>use 32 bit bitmaps (add alpha channel)</li></ul></li></ul></li>
+		<li>adding more types:<ul>
+			<li>objects version 3<ul>
+				<li>explain error in colour definition</li>
+				<li>skip forward to fixed version 3</li>
+				<li>multiple loops each updating multiple instances</li>
+				<li>started running out of names</li>
+				<li>note the repetition here</li>
+				<li>note the number of places I need to maintain each type</li></ul></li></ul></li>
+		<li>extracting objects:<ul>
+			<li>introducing objects<ul>
+				<li>objects are another way to split code</li>
+				<li>functions abstract common data</li>
+				<li>structures abstract common data</li>
+				<li>objects combine the two</li>
+				<li>objects encapsulate and hide data</li>
+				<li>why is hiding things good?</li>
+				<li>also known as abstract data types</li>
+				<li>the law of Demeter</li></ul></li>
+			<li>objects version 4<ul>
+				<li>extract each type into its own .cpp and .h pair</li>
+				<li>provide functions to<ul>
+					<li>load</li>
+					<li>start or reset</li>
+					<li>update by time</li>
+					<li>render</li></ul></li>
+				<li>note:<ul>
+					<li>pass definition data in load function</li>
+					<li>header files don't expose data structures</li>
+					<li>still a lot of duplication in functions</li>
+					<li>... and in the calls</li></ul></li></ul></li></ul></li>
+		<li>break</li>
+		<li>object oriented features of C++:<ul>
+			<li>objects version 5<ul>
+				<li>converted to from struct to class<ul>
+					<li>class defaults to private access</li>
+					<li>override with the public keyword</li>
+					<li>only public functions accessible from outside</li>
+					<li>functions imply the instance</li>
+					<li>reduces parameter passing</li></ul></li></ul></li>
+			<li>objects version 6<ul>
+				<li>missing source files</li>
+				<li>create a base class</li>
+				<li>an abstract base class</li>
+				<li>pure virtual functions</li>
+				<li>override a collection class<ul>
+					<li>protected function</li>
+					<li>separates interface from implementation</li>
+					<li>function objects</li></ul></li>
+				<li>override collection for type array</li>
+				<li>override collection for instances</li>
+				<li>override object for instance classes</li>
+				<li>follow through an update loop</li></ul></li></ul></li>
+		<li>exercise:<ul>
+			<li>make at least one new object type:<ul>
+				<li>use ball or mote cpp and h files as a template</li>
+				<li>hints<ul>
+					<li>add a new cpp and h file for your type</li>
+					<li>give your type a descriptive name</li>
+					<li>32 bit bitmap with alpha channel</li>
+					<li>give it distinctive behaviour</li>
+					<li>make it look different</li></ul></li></ul></li>
+			<li>caution: do not copy the existing project folder</li>
+			<li>to copy the existing project:<ul>
+				<li>make a new folder in your surname folder</li>
+				<li>copy only the contained files:<ul>
+					<li>objects.sln</li>
+					<li>objects.vcxproj</li>
+					<li>objects.vcxproj.filters</li>
+					<li>any bmp and wav files</li>
+					<li>all the cpp and h files</li></ul></li>
+				<li>remember to commit only these files</li></ul></li></ul></li></ol></p>
+</body>
+</html>

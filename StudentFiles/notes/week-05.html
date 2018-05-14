@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD html 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Week 5 class plan</title>
+	<link rel="stylesheet" title="plain" type="text/css" href="plain.css" />
+	<link rel="alternate stylesheet" title="colour" type="text/css" href="colour.css"/>
+</head>
+<body>
+	<h1>Bouncing ball simulation</h1>
+	<p>My plan for this class:<ol>
+		<li>change the programming environment<ul>
+			<li>hidden files<ul>
+				<li>choose folder options</li>
+				<li>choose show hidden files and folders</li>
+				<li>explain .svn hidden folder and files</li></ul></li>
+			<li>environment variables<ul>
+				<li>explain environment variables</li>
+				<li>explain what PATH is used for</li>
+				<li>open the control panel</li>
+				<li>choose "User Accounts and Family Safety"</li>
+				<li>choose "User Accounts"</li>
+				<li>click on "Change my environment variables" button</li>
+				<li>add or edit PATH variable</li>
+				<li>set to "%USERPROFILE%\Documents\programming\libraries\lib"</li>
+				<li>restart Visual Studio</li></ul></li></ul></li>
+		<li>refactoring the board program<ul>
+			<li>explain "i" as index</li>
+			<li>explain why not "event" as variable name</li>
+			<li>imagine making a similar program</li>
+			<li>note that much of the code could be shared</li>
+			<li>add new source file engine.cpp</li>
+			<li>extract common functions to engine.cpp</li>
+			<li>add new header file engine.h</li>
+			<li>prototype functions in engine.h</li>
+			<li>include engine.h from both sources</li>
+			<li>step through program in detail</li></ul></li>
+		<li>break</li>
+		<li>bounce program<ul>
+			<li>note this program reuses engine.cpp</li>
+			<li>note first real time game loop</li>
+			<li>debugging functions of Visual Studio less useful</li>
+			<li>implement single step and breakpoint options</li>
+			<li>split data into three parts: "definition", "type", and "instance"</li>
+			<li>"definition" contains load time resources</li>
+			<li>"type" contains common data for ball instances</li>
+			<li>"instance" contains per instance data</li>
+			<li>as before, the loop updates and then draws</li>
+			<li>"update" moves the position of the ball due to gravity</li>
+			<li>detect if the ball is beyond the bottom of the screen</li>
+			<li>if so, bounce it by recalculating its velocity and position</li>
+			<li>not an accurate simulation</li>
+			<li>"draw" just draws the current position</li></ul></li>
+		<li>exercise<ul>
+			<li>do one or more of the following:<ul>
+				<li>give the ball a random starting position</li>
+				<li>add a bounce sound effect when the ball bounces</li>
+				<li>give the ball some initial horizontal motion</li>
+				<li>have the ball bounce at the sides of the screen</li></ul></li>
+			<li>caution: do not copy the existing project folder</li>
+			<li>to copy the existing project:<ul>
+				<li>make a new folder in your surname folder</li>
+				<li>copy only the contained files:<ul>
+					<li>bounce.sln</li>
+					<li>bounce.vcxproj</li>
+					<li>bounce.vcxproj.filters</li>
+					<li>ball.bmp</li>
+					<li>bounce.cpp</li>
+					<li>engine.cpp</li>
+					<li>engine.h</li></ul></li></ul></li>
+			<li>when you submit, remember to include any data files</li></ul></li></ol></p>
+
+</body>
+</html>
